@@ -78,6 +78,7 @@ java_version() {
 }
 
 install_java() {
+  echo "building java -- "
   cache_dir=$1
   build_dir=$2
   jdk_url=${3:-"http://download.oracle.com/otn-pub/java/jdk/8u20-b26/jdk-8u20-linux-x64.tar.gz"}
@@ -102,6 +103,9 @@ install_java() {
   
   export JAVA_HOME="${build_dir}/.jdk"
   export PATH="${build_dir}/.jdk/bin:${PATH}"
+  echo "Exported java home"
+  echo $JAVA_HOME
+  echo $PATH
 }
 
 install_jce() {
