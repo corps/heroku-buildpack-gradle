@@ -77,7 +77,7 @@ java_version() {
   echo $(${base}java -version 2>&1 | head -n 1 | cut -d '"' -f 2)
 }
 
-install_java() {
+install_java_2() {
   echo "building java -- "
   cache_dir=$1
   build_dir=$2

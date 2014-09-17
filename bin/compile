@@ -39,7 +39,7 @@ fi
 jdk_overlay ${BUILD_DIR}
 
 statusn "Installing JDK..."
-install_java $CACHE_DIR $BUILD_DIR
+install_java_2 $CACHE_DIR $BUILD_DIR
 echo "Installed Oracle JDK 1.8"
 
 echo "done"
