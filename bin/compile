@@ -19,7 +19,7 @@ GRADLE_TASK=${GRADLE_TASK-stage}
 
 # protect my git history!
 JVM_BUILDPACK_SANDBOX=jvmsandbox
-if [ ! -f ${JVM_BUILDPACK_SANDBOX} ]; then
+if [ ! -d $JVM_BUILDPACK_SANDBOX ]; then
   mkdir $JVM_BUILDPACK_SANDBOX
 fi
 
