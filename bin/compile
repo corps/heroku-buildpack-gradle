@@ -19,7 +19,9 @@ GRADLE_TASK=${GRADLE_TASK-stage}
 
 # protect my git history!
 JVM_BUILDPACK_SANDBOX=jvmsandbox
-mkdir $JVM_BUILDPACK_SANDBOX
+if [ ! -f ${JVM_BUILDPACK_SANDBOX} ]; then
+  mkdir $JVM_BUILDPACK_SANDBOX
+fi
 
 cd $JVM_BUILDPACK_SANDBOX
 curl --silent --location http://lang-jvm.s3.amazonaws.com/jvm-buildpack-common-v1.0.tar.gz | tar xz
